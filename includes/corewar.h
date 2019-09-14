@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   corewar.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 18:27:12 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/14 18:06:59 by hlarson          ###   ########.fr       */
+/*   Created: 2019/09/14 18:00:08 by hlarson           #+#    #+#             */
+/*   Updated: 2019/09/14 18:54:15 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
+#ifndef COREWAR_H
+# define COREWAR_H
+# include "op.h"
+# include "../Libft/libft.h"
 
-int		main(int argc, char **argv)
+typedef struct	s_map
 {
-	t_map	map;
+	char	**ch_names;
+	size_t	names_iterator;
+	int		dump;
+	int		d;
+	int		v;
+}				t_map;
 
-	if (argc == 1)
-		return (0);
-	ft_validate(argv, &map);
-}
+#endif

@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 17:27:54 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/14 17:59:35 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/14 19:07:21 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ int		check_for_name(char **argv, t_map *map, size_t *i)
 		add_flag_dump(map, argv, i);
 	else if (ft_strcmp(argv[i], "-d") == 0)
 		add_flag_d(map, argv, i);
+	else if (ft_strcmp(argv[i], "-v") == 0)
+		add_flag_v(map);
 	else
 		add_champ_name(map, argv, i);
 	return ((*i == 0) ? -1 : 0);
 }
 
-int		ft_validate(char **argv)
+int		ft_validate(char **argv, t_map *map)
 {
 	size_t	i;
 
