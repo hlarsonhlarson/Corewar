@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 18:00:08 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/14 18:54:15 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/15 15:23:59 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 typedef struct	s_map
 {
-	char	**ch_names;
+	t_list	*ch_names;
 	size_t	names_iterator;
 	int		dump;
 	int		d;
