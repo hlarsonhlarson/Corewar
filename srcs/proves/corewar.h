@@ -126,5 +126,13 @@ int		print_winner(t_parse *flags);
 void	ft_set_lives(t_list *carret, size_t i, int delta);
 void	life_checker(t_parse *flags, int *k, size_t i, size_t *delta);
 void	print_map_printf(unsigned char *map, t_parse *flags);
+char			*print_begin(int index, int champion_exec_code_size, \
+		char *name, char *comment);
+void		colorizer(unsigned char *color, unsigned char paint, size_t size);
+t_list		*add_to_print(char *to_print, t_list *old);
+void		help_carret_generate(t_carret *carret, size_t index,
+                                 t_parse *flags, t_list *files);
+t_list		*carret_generate(t_list *files, t_parse *flags,
+                               size_t file_num);
 
 #endif
