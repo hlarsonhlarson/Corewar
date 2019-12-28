@@ -23,8 +23,10 @@ static int	help_init(void)
 	return (0);
 }
 
-int			init_ncurses(void)
+int			init_ncurses(t_parse *flags)
 {
+    if (!(flags->v))
+        return (0);
 	initscr();
 	start_color();
 	noecho();

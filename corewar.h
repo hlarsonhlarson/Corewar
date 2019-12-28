@@ -101,7 +101,7 @@ int						what_arg(char c);
 int						get_reg(unsigned char *c, size_t *i);
 void					live(t_parse *flags, t_carret *carret, size_t cycle);
 void					print_map(unsigned char *c, t_parse *flags, size_t j);
-int						init_ncurses(void);
+int						init_ncurses(t_parse *flags);
 void					op_or(t_parse *flags, t_carret *carret);
 void					op_and(t_parse *flags, t_carret *carret);
 void					op_xor(t_parse *flags, t_carret *carret);
