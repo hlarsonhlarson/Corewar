@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 19:02:54 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/12/28 17:36:42 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/12/28 18:25:50 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,5 +139,7 @@ t_list					*carret_generate(t_list *files, t_parse *flags,
 		size_t file_num);
 void					print_hex_two(unsigned char n);
 void					print_hex_four(int n);
+void					free_carrets(t_list *carret);
+void					free_field(t_parse *flags);
 
 #endif

@@ -100,7 +100,7 @@ t_list			*carret_generate(t_list *files, t_parse *flags,
 	{
 		carret.pos = (index - 1) * ((MEM_SIZE) / file_num);
 		help_carret_generate(&carret, index, flags, files);
-		ft_lstadd(&result, ft_lstnew(ft_memdup(&carret,
+		ft_lstadd(&result, ft_lstnew_no_copy(ft_memdup(&carret,
 						sizeof(t_carret)), sizeof(t_carret)));
 		to_print = add_to_print(print_begin(index,
 					carret.champion_exec_code_size,

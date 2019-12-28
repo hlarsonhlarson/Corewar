@@ -28,6 +28,8 @@ int		end_main_alg(t_parse *flags, int win)
 		endwin();
 	if (win != 0)
 		print_winner(flags);
+	free_carrets(flags->carret);
+	free_field(flags);
 	return (0);
 }
 

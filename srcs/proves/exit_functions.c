@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   temp_main.c                                        :+:      :+:    :+:   */
+/*   free_crrets.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/26 18:15:05 by hlarson           #+#    #+#             */
-/*   Updated: 2019/12/28 16:00:36 by hlarson          ###   ########.fr       */
+/*   Created: 2019/12/28 18:10:19 by hlarson           #+#    #+#             */
+/*   Updated: 2019/12/28 18:25:33 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int	main(int argc, char **argv)
+void	free_carrets(t_list *carret)
 {
-	t_list	*arguments;
-	t_parse	flags;
+	t_carret	*carret_tmp;
+	t_list		*tmp;
+	t_list		*tmp_2;
 
-	arguments = ft_get_arguments_command_line(argc, argv);
-	prove_arguments(arguments);
-	parser(arguments, &flags);
-	main_alg(&flags);
-	ft_lst_free_chain(arguments);
-	return (0);
+	tmp = carret;
+	while (tmp)
+	{
+		carret_tmp = tmp->content;
+		free(carret_tmp->reg);
+		free(carret_tmp->name);
+		free(carret_tmp->comment);
+		free(carret_tmp);
+		tmp_2 = tmp->next;
+		free(tmp);
+		tmp = tmp_2;
+	}
+}
+
+void	free_field(t_parse *flags)
+{
+	free(flags->color);
+	free(flags->map);
 }
