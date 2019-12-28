@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 19:02:54 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/12/28 16:18:04 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/12/28 17:14:29 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct			s_parse
 	unsigned char		*map;
 	unsigned char		*color;
 	t_list				*carret;
-	int                 check;
+	int					check;
 	int					print_movement;
 }						t_parse;
 
@@ -56,15 +56,15 @@ typedef struct			s_carret
 	char				*comment;
 	int					*reg;
 	int					dead;
-	char                op;
-	int                 id;
-	int                 pos;
+	char				op;
+	int					id;
+	int					pos;
 	size_t				timer;
 	int					movement;
 	int					live;
 	int					carry;
 	int					live_last;
-    int					champion_exec_code_size;
+	int					champion_exec_code_size;
 }						t_carret;
 
 void					error_out(char *error_message);
@@ -88,15 +88,15 @@ void					prove_files(t_list *files);
 void					prove_num_position(t_list *args);
 void					prove_nulls(t_list *lst);
 int						move_and_do(t_carret *carret, \
-	size_t i, t_parse *flags);
+						size_t i, t_parse *flags);
 int						get_dir_one(unsigned char *c, size_t *i);
 short					get_dir_two(unsigned char *c, size_t *i);
 int						main_alg(t_parse *flags);
 void					zjmp(t_carret *carret, unsigned char *c);
 void					sti(t_parse *flags, t_carret *carret);
-short						get_ind(unsigned char *c, size_t *i);
-int					get_arg_for_ind(unsigned char *c, \
-	t_carret *carret, size_t *i, int ind);
+short					get_ind(unsigned char *c, size_t *i);
+int						get_arg_for_ind(unsigned char *c, \
+						t_carret *carret, size_t *i, int ind);
 int						what_arg(char c);
 int						get_reg(unsigned char *c, size_t *i);
 void					live(t_parse *flags, t_carret *carret, size_t cycle);
@@ -112,27 +112,30 @@ void					lld(t_parse *flags, t_carret *carret);
 void					insert_next(t_carret *carret, t_list *current);
 void					op_fork(t_parse *flags, t_carret *carret);
 void					set_movement(t_carret *carret, \
-	unsigned char c, int num_args, int dir_size);
+						unsigned char c, int num_args, int dir_size);
 void					op_lfork(t_parse *flags, t_carret *carret);
 void					st(t_parse *flags, t_carret *carret);
 void					ldi(t_parse *flags, t_carret *carret);
 void					lldi(t_parse *flags, t_carret *carret);
 void					aff(t_parse *flags, t_carret *carret);
 void					print_byte_reg(int *d);
-void                    set_timer(t_carret *carret, t_parse *flags);
-void	init_main_alg(size_t *i, size_t *delta, int *k, int *win);
-int		end_main_alg(t_parse *flags, int win);
-int		print_winner(t_parse *flags);
-void	ft_set_lives(t_list *carret, size_t i, int delta);
-void	life_checker(t_parse *flags, int *k, size_t i, size_t *delta);
-void	print_map_printf(unsigned char *map, t_parse *flags);
-char			*print_begin(int index, int champion_exec_code_size, \
-		char *name, char *comment);
-void		colorizer(unsigned char *color, unsigned char paint, size_t size);
-t_list		*add_to_print(char *to_print, t_list *old);
-void		help_carret_generate(t_carret *carret, size_t index,
-                                 t_parse *flags, t_list *files);
-t_list		*carret_generate(t_list *files, t_parse *flags,
-                               size_t file_num);
+void					set_timer(t_carret *carret, t_parse *flags);
+void					init_main_alg(size_t *i,
+						size_t *delta, int *k, int *win);
+int						end_main_alg(t_parse *flags, int win);
+int						print_winner(t_parse *flags);
+void					ft_set_lives(t_list *carret, size_t i, int delta);
+void					life_checker(t_parse *flags, int *k,
+						size_t i, size_t *delta);
+void					print_map_printf(unsigned char *map, t_parse *flags);
+char					*print_begin(int index, int champion_exec_code_size, \
+						char *name, char *comment);
+void					colorizer(unsigned char *color,
+						unsigned char paint, size_t size);
+t_list					*add_to_print(char *to_print, t_list *old);
+void					help_carret_generate(t_carret *carret, size_t index,
+						t_parse *flags, t_list *files);
+t_list					*carret_generate(t_list *files, t_parse *flags,
+						size_t file_num);
 
 #endif
