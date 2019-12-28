@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 02:23:13 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/12/28 16:35:52 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/12/28 17:35:52 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void		print_map_printf(unsigned char *map, t_parse *flags)
 	while (i != MEM_SIZE)
 	{
 		if (i % k == 0 && i)
-			printf("%c\n", ' ');
+			ft_putstr(" \n");
 		if (i % k == 0 && i)
-			printf("%#04.4x :", i);
+			print_hex_four(i);
 		else if (i % k == 0)
-			printf("0x0000 :");
-		printf(" ");
-		printf("%0.2x", map[i]);
+			ft_putstr("0x0000 :");
+		ft_putchar(' ');
+		print_hex_two(map[i]);
 		i++;
 	}
 	printf(" \n");
