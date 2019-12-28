@@ -120,5 +120,11 @@ void					lldi(t_parse *flags, t_carret *carret);
 void					aff(t_parse *flags, t_carret *carret);
 void					print_byte_reg(int *d);
 void                    set_timer(t_carret *carret, t_parse *flags);
+void	init_main_alg(size_t *i, size_t *delta, int *k, int *win);
+int		end_main_alg(t_parse *flags, int win);
+int		print_winner(t_parse *flags);
+void	ft_set_lives(t_list *carret, size_t i, int delta);
+void	life_checker(t_parse *flags, int *k, size_t i, size_t *delta);
+void	print_map_printf(unsigned char *map, t_parse *flags);
 
 #endif
