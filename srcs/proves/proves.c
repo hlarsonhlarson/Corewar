@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   proves.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/28 15:59:12 by hlarson           #+#    #+#             */
+/*   Updated: 2019/12/28 15:59:20 by hlarson          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "corewar.h"
 
-void prove_arguments(t_list *arguments)
+void	prove_arguments(t_list *arguments)
 {
 	if (!arguments)
 		error_out("Error: not arguments");

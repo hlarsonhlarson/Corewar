@@ -6,26 +6,13 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 19:07:15 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/10/05 19:07:17 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/12/28 15:55:43 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
-/*
-static int	ft_isdigits(char *str)
-{
-	if (!str)
-		return (0);
-	while (*str)
-	{
-		if (!(ft_isdigit(*str)))
-			return (0);
-		str++;
-	}
-	return (1);
-}
-*/
-int is_dot_cor(char *str)
+
+int			is_dot_cor(char *str)
 {
 	int cmp;
 
@@ -37,7 +24,7 @@ int is_dot_cor(char *str)
 	return (0);
 }
 
-int iss(char *str, char *original, size_t len)
+int			iss(char *str, char *original, size_t len)
 {
 	if (ft_strlen(str) != len)
 		return (0);
@@ -46,7 +33,7 @@ int iss(char *str, char *original, size_t len)
 	return (0);
 }
 
-static int is_proves(t_list *lst)
+static int	is_proves(t_list *lst)
 {
 	int to_prove;
 
@@ -67,7 +54,7 @@ static int is_proves(t_list *lst)
 	return (1);
 }
 
-void all_is_proves(t_list *lst)
+void		all_is_proves(t_list *lst)
 {
 	if (!is_proves(lst))
 		error_out_free_lst("Error: unrecognized argument type", lst);

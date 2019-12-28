@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 15:43:38 by hlarson           #+#    #+#             */
-/*   Updated: 2019/12/28 15:21:51 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/12/28 15:58:24 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ static int	help_init(void)
 
 int			init_ncurses(t_parse *flags)
 {
-    if (!(flags->v))
-        return (0);
+	if (!(flags->v))
+		return (0);
 	initscr();
 	start_color();
 	noecho();
