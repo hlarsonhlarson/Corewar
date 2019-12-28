@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 02:23:13 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/12/28 15:46:51 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/12/28 16:17:47 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,59 +39,15 @@ static void	print_map_printf(unsigned char *map, t_parse *flags)
 	printf(" \n");
 }
 
-void		set_timer(t_carret *carret, t_parse *flags)
+void	work_with_carret(t_list *tmp, size_t i, t_parse *flags)
 {
-	unsigned char	c;
-
-	c = (flags->map)[carret->pos];
-	carret->op = c;
-	if (c == 1)
-		carret->timer = 10;
-	else if (c == 2)
-		carret->timer = 5;
-	else if (c == 3)
-		carret->timer = 5;
-	else if (c == 4)
-		carret->timer = 10;
-	else if (c == 5)
-		carret->timer = 10;
-	else if (c == 6)
-		carret->timer = 6;
-	else if (c == 7)
-		carret->timer = 6;
-	else if (c == 8)
-		carret->timer = 6;
-	else if (c == 9)
-		carret->timer = 20;
-	else if (c == 10)
-		carret->timer = 25;
-	else if (c == 11)
-		carret->timer = 25;
-	else if (c == 12)
-		carret->timer = 800;
-	else if (c == 13)
-		carret->timer = 10;
-	else if (c == 14)
-		carret->timer = 50;
-	else if (c == 15)
-		carret->timer = 1000;
-	else if (c == 16)
-		carret->timer = 2;
-	else
-	{
-		if ((flags->color)[carret->pos] != 200
-				&& (flags->color)[carret->pos] != 0)
-			(flags->color)[carret->pos] /= 10;
-		else
-			(flags->color)[carret->pos] = 0;
-		carret->pos += 1;
-		if (carret->pos >= MEM_SIZE)
-			carret->pos %= MEM_SIZE;
-		carret->timer = 0;
-		(carret->movement) = 0;
-		return ;
-	}
-	carret->movement = 1;
+	((t_carret *)(tmp->content))->movement = 0;
+	move_and_do(tmp->content, i, flags);
+	(flags->color)[((t_carret *)(tmp->content))->pos] = 0;
+	((t_carret *)(tmp->content))->pos =
+		(((t_carret *)(tmp->content))->movement
+		+ ((t_carret *)(tmp->content))->pos) % MEM_SIZE;
+	((t_carret *)(tmp->content))->movement = 0;
 }
 
 int	run_carret(t_list *carret, size_t i, t_parse *flags)
@@ -107,17 +63,14 @@ int	run_carret(t_list *carret, size_t i, t_parse *flags)
 					&& ((t_carret *)(tmp->content))->movement == 0)
 				set_timer(tmp->content, flags);
 			if (((t_carret *)(tmp->content))->timer != 0)
-				((t_carret *)(tmp->content))->timer = ((t_carret *)(tmp->content))->timer - 1;
-			if (((t_carret *)(tmp->content))->timer <= 0 && ((t_carret *)(tmp->content))->movement == 1)
-			{
-				((t_carret *)(tmp->content))->movement = 0;
-				move_and_do(tmp->content, i, flags);
-				(flags->color)[((t_carret *)(tmp->content))->pos] = 0;
-				((t_carret *)(tmp->content))->pos = (((t_carret *)(tmp->content))->movement + ((t_carret *)(tmp->content))->pos) % MEM_SIZE;
-				((t_carret *)(tmp->content))->movement = 0;
-			}
+				((t_carret *)(tmp->content))->timer =
+					((t_carret *)(tmp->content))->timer - 1;
+			if (((t_carret *)(tmp->content))->timer <= 0
+					&& ((t_carret *)(tmp->content))->movement == 1)
+				work_with_carret(tmp, i, flags);
 		}
-		if (((flags->color)[((t_carret *)(tmp->content))->pos] *= 10) == 0 && (((t_carret *)(tmp->content))->dead == 0))
+		if (((flags->color)[((t_carret *)(tmp->content))->pos] *= 10) == 0
+				&& (((t_carret *)(tmp->content))->dead == 0))
 			(flags->color)[((t_carret *)(tmp->content))->pos] = 200;
 		tmp = tmp->next;
 	}
@@ -126,7 +79,7 @@ int	run_carret(t_list *carret, size_t i, t_parse *flags)
 
 static int	check_for_life(t_list *carret)
 {
-	t_list	*tmp;
+	t_list		*tmp;
 	t_carret	*help;
 
 	tmp = carret;
@@ -140,10 +93,10 @@ static int	check_for_life(t_list *carret)
 	return (1);
 }
 
-int print_winner(t_parse *flags)
+int		print_winner(t_parse *flags)
 {
-	t_list *gamers;
-	t_carret *gamer;
+	t_list		*gamers;
+	t_carret	*gamer;
 
 	gamers = flags->carret;
 	while (gamers)
@@ -172,19 +125,17 @@ void	ft_set_lives(t_list *carret, size_t i, int delta)
 	while (tmp)
 	{
 		tmp_carret = tmp->content;
-		if (tmp_carret->dead == 0) {
-
+		if (tmp_carret->dead == 0)
+		{
 			res_delta = i - tmp_carret->live_last;
 			if (res_delta >= compare)
-			{
 				tmp_carret->dead = 1;
-			}
 		}
 		tmp = tmp->next;
 	}
 }
 
-void    life_checker(t_parse *flags, int *k, size_t i, size_t *delta)
+void	life_checker(t_parse *flags, int *k, size_t i, size_t *delta)
 {
 	ft_set_lives(flags->carret, i, *delta);
 	if ((flags->live) >= (int)NBR_LIVE)
@@ -203,7 +154,7 @@ void    life_checker(t_parse *flags, int *k, size_t i, size_t *delta)
 	*k = (int)(CYCLES_TO_DIE - *delta);
 }
 
-void    init_main_alg(size_t *i, size_t *delta, int *k, int *win)
+void	init_main_alg(size_t *i, size_t *delta, int *k, int *win)
 {
 	(*win) = 0;
 	(*i) = 0;
@@ -211,7 +162,7 @@ void    init_main_alg(size_t *i, size_t *delta, int *k, int *win)
 	(*k) = (int)(CYCLES_TO_DIE) - 1;
 }
 
-int   end_main_alg(t_parse *flags, int win)
+int		end_main_alg(t_parse *flags, int win)
 {
 	if ((flags->d != 0 || flags->dump != 0) && win == 0)
 		print_map_printf(flags->map, flags);
