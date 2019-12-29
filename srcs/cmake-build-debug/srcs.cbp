@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="srcs"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/hlarson/cor7/srcs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/hlarson/cor7/srcs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/hlarson/cor7/srcs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="srcs">
+				<Option output="/Users/hlarson/cor7/srcs/cmake-build-debug/srcs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hlarson/cor7/srcs/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 srcs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="srcs/fast">
+				<Option output="/Users/hlarson/cor7/srcs/cmake-build-debug/srcs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hlarson/cor7/srcs/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 srcs/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hlarson/cor7/srcs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/hlarson/cor7/srcs/add.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/aff.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/and.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/errors.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/exit_functions.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/fork.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/get_args.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/get_filenames.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/help_main_alg.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/help_parser.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/insert_next.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/iss.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/ld.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/ldi.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/lfork.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/live.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/lld.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/lldi.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/main_alg.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/move_and_do.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/next_proves.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/num_args_prove.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/or.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/overflow_numbers_prove.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/parser.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/previous_prove.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/print_hex.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/print_map.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/prove_blocks.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/prove_duples.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/prove_files.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/prove_nulls.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/prove_num_position.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/proves.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/range_filenames.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/set_movement.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/set_timer.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/st.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/sti.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/sub.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/temp_main.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/what_arg.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/xor.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/zjmp.c">
+			<Option target="srcs"/>
+		</Unit>
+		<Unit filename="/Users/hlarson/cor7/srcs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
